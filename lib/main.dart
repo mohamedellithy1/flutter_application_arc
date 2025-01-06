@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_test/model/song_model.dart';
-import 'package:flutter_application_test/view/my_app.dart';
+import 'package:flutter_application_test/view/home_screen.dart';
+
 
 /// model
 // song controller 
@@ -8,4 +8,14 @@ import 'package:flutter_application_test/view/my_app.dart';
 // view 
 main() {
 runApp( MyApp());  
+}
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: HomeScreen(),
+    );
+  }
 }
