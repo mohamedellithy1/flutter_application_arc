@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_test/app_router.dart';
 
 
 /// model
@@ -6,15 +7,18 @@ import 'package:flutter/material.dart';
 
 // view 
 main() {
-runApp( MyApp());  
+runApp(  BreakingBadApp(appRouter: AppRouter() ,));  
 }
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BreakingBadApp extends StatelessWidget {
+  const BreakingBadApp({super.key, required this.appRouter});
+  final AppRouter appRouter;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Text('ds'),
+     debugShowCheckedModeBanner: false,
+     onGenerateRoute: appRouter.generateRoute,
+
     );
   }
 }
