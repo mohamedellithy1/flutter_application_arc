@@ -1,24 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_test/app_router.dart';
 
-
-/// model
-// song controller 
-
-// view 
 main() {
-runApp(  BreakingBadApp(appRouter: AppRouter() ,));  
+runApp(  const NewsApp());  
 }
-class BreakingBadApp extends StatelessWidget {
-  const BreakingBadApp({super.key, required this.appRouter});
-  final AppRouter appRouter;
+class NewsApp extends StatelessWidget {
+  const NewsApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-     debugShowCheckedModeBanner: false,
-     onGenerateRoute: appRouter.generateRoute,
-
+    return  MaterialApp(
+      title: 'News App',
+      theme: li,
+      themeMode: ThemeMode.system,
+      darkTheme: ThemeData.dark(), 
     );
   }
 }
